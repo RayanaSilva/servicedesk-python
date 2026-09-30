@@ -4,7 +4,7 @@ import customtkinter as ctk
 import database as db
 
 # Paleta de cores personalizada para o Treeview
-_THREE_BG = "#lelele"
+_THREE_BG = "#1e1e1e"
 _THREE_FG = "#ffffff"
 _THREE_HEADER_BG = "#1F6AA5"
 _THREE_SEL_BG = "#2FA572"
@@ -28,8 +28,8 @@ def _aplicar_estilo_treeview():
                     relief="flat",
     )
     style.map("Treeview",
-                background=_THREE_HEADER_BG,
-                foreground=_THREE_FG,
+                background=[("selected", _THREE_SEL_BG)],
+                foreground=[("selected", _THREE_FG)],
     )
 
 def _label_titulo(parent, text):
@@ -211,7 +211,7 @@ class AbaChamado(ctk.CTkFrame):
         self.cb_cliente.configure(values=[f"{c[0]} - {c[1]}" for c in clientes])
 
         funcionarios = db.listar_funcionarios_db()
-        self.cb_funcionario["values"] = [f"{f[0]} - {f[1]}" for f in funcionarios]
+        self.cb_funcionario.configure(values=[f"{f[0]} - {f[1]}" for f in funcionarios])
 
     def salvar(self):
         cli_sel = self.cb_cliente.get()
