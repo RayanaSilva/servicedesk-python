@@ -119,8 +119,8 @@ O sistema utiliza 4 tabelas no Oracle Database:
 
 ## 🚀 Próximas melhorias planejadas
 
-- [ ] Consulta de chamados encerrados com filtro por período, cliente ou técnico
-- [ ] Visualização detalhada do chamado encerrado (solução, histórico e data de fechamento)
+- ✅ Consulta de chamados encerrados com filtro por período, cliente ou técnico 30/09/26
+- ✅ Visualização detalhada do chamado encerrado (solução, histórico e data de fechamento) 30/09/26
 - [ ] Autenticação de usuários (login e senha)
 - [ ] Filtros por status, prioridade e categoria na tela de gestão
 - [ ] Tela de histórico completo por chamado
